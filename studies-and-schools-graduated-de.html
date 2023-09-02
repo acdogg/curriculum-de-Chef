@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+  
+    <style>
+      .image-container {
+          display: flex;
+          align-items: center;
+      }
+
+      .image {
+          max-width: 500px;
+      }
+
+      .text {
+          margin-left: 20px;
+      }
+    </style>
+</head>
+
+<body>
+  <header>
+    <a href="index-de.html">Startseite</a>
+    <a href="about-me-de.html">Über mich</a>
+    <a href="professional-experience-de.html">Berufserfahrung</a>
+    <a href="studies-and-schools-graduated-de.html">Studium und abgeschlossene Schulen</a>
+    <a href="contact-de.html.">Kontakt</a>
+    <a href="my-work-de.html">Meine Arbeit</a>
+    <h2><strong>Lebenslauf</strong></h2>
+  </header>
+
+  <br>
+  <br>
+  <br>
+
+  <div class="content en">
+    <h1 class="centered">Studium und Abschlüsse</h1>
+    <div class="image-container">
+      <img class="image" src="images/geoid.webp" alt="Foto Schulabschluss">
+      <p class="text">
+        Abitur in Architektur und Stadtplanung<br>
+        Bukarest, Rumänien | 2000<br>
+        Bakkalaureat-Abschluss<br>
+        Bukarest, Rumänien | 2000
+      </p>
+    </div>
+
+    <br>
+    <br>
+    <br>
+      
+    <div class="image-container">
+      <img class="image" src="images/IMG-20190407-WA0000.jpg" alt="Foto Kochausbildung">
+      <p class="text">
+        Berufsausbildung - Kochkurs | 2004<br>
+        Bukarest, Rumänien
+      </p>
+    </div>
+
+    <br>
+    <br>
+    <br>
+
+    <div class="image-container">
+      <img class="image" src="images/IMG-20170524-WA0035.jpg" alt="Foto Bäcker, Konditor, Pizzaiolo Kurs">
+      <p class="text">
+        Bäcker, Konditor, Pizzaiolo Kurs | 2006<br>
+        Verona, Italien
+      </p>
+    </div>
+  </div>
+
+    <br>
+    <br>
+    <br>
+
+    <div class="image-container">
+      <img class="image" src="images/FB_IMG_1499000581446.jpg" alt="Foto Chefkurs">
+      <p class="text">
+        Berufsausbildung - Chefkurs | 2017<br>
+        Bukarest, Rumänien
+      </p>
+    </div>
+  
+    <br>
+    <br>
+    <br>
+
+    <footer>
+        <p class="centered">© 2023 Andrei-Costea Niculae. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Obține elementul de selectare a limbii
+        const languageSelector = document.getElementById('language-selector');
+    
+        // Atașează un eveniment de schimbare a selecției
+        languageSelector.addEventListener('change', function() {
+            const selectedLanguage = this.value;
+            const currentPage = window.location.pathname;
+            let newPage = '';
+    
+            // Construiește noul URL pentru pagina corespunzătoare limbii selectate
+            if (currentPage.endsWith('-en.html')) {
+                newPage = currentPage.replace('-en.html', `-${selectedLanguage}.html`);
+            } else if (currentPage.endsWith('-de.html')) {
+                newPage = currentPage.replace('-de.html', `-${selectedLanguage}.html`);
+            } else {
+                newPage = `${currentPage.split('.')[0]}-${selectedLanguage}.html`;
+            }
+    
+            // Redirecționează utilizatorul la noua pagină
+            window.location.href = newPage;
+        });
+    </script>
+    
+</body>
+</html>
