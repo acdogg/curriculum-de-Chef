@@ -4,107 +4,124 @@ body, h1, h2, h3, p, ul {
   padding: 0;
 }
 
-/* Stilizare font și fundal pentru întreg documentul */
 body {
-  font-family: 'Helvetica Neue', sans-serif; /* Setarea fontului */
-  background-color: rgb(170, 230, 218); /* Setarea culorii de fundal */
+  font-family: 'Helvetica Neue', sans-serif;
+  background-color: rgb(170, 230, 218);
+  font-size: 18px; /* Dimensiunea textului implicită pentru PC-uri */
 }
 
 /* Stilizare antet */
 header {
-  position: fixed; /* Fixarea antetului în partea de sus a paginii */
+  position: fixed;
   top: 0;
   left: 0;
-  width: 98%; /* Lățime de 98% a antetului */
-  background-color: #f1e509; /* Culoare de fundal a antetului */
-  height: 70px; /* Înălțimea antetului */
-  z-index: 1000; /* Prioritate peste alte elemente */
-  display: flex; /* Stilizare flexibilă pentru alinierea elementelor */
-  align-items: center; /* Alinierea elementelor pe axa verticală */
-  justify-content: space-between; /* Spațiere egală între elemente */
-  padding: 0 20px; /* Margini interioare pentru antet */
+  width: 98%;
+  background-color: #f1e509;
+  height: 70px;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
 }
 
 /* Stilizare link-uri din antet */
 header a {
-  color: black; /* Culoarea textului link-urilor */
-  font-size: 18px; /* Dimensiunea textului link-urilor */
-  text-decoration: none; /* Eliminarea decorațiunilor (subliniere) de la link-uri */
-  margin-right: 5px; /* Spațiu la dreapta între link-uri */
+  color: black;
+  font-size: 18px;
+  text-decoration: none;
+  margin-right: 5px;
 }
 
 /* Stilizează containerul pentru conținut */
 .container {
-  max-width: 1200px; /* Lățime maximă a containerului */
-  margin: 0 auto; /* Centrarea containerului pe pagină */
-  padding: 20px; /* Margini interioare pentru conținut */
+  max-width: 1200px; /* Alegeți lățimea dorită pentru conținut pe PC-uri */
+  margin: 0 auto; /* Centrează containerul pe pagină */
+  padding: 20px; /* Adaugă un spațiu de la marginea paginii */
 }
 
-/* Stilizare conținut central */
+/* Stilizare continut central */
 .centered {
-  text-align: center; /* Alinierea textului la centru */
-  padding: 30px; /* Margini interioare pentru spațiu în jurul conținutului central */
+  text-align: center;
+  padding: 30px;
 }
 
 /* Stilizare imagine în cadrul textului */
 .image-container {
-  display: flex; /* Stilizare flexibilă pentru alinierea imaginii și textului */
-  align-items: center; /* Alinierea pe axa verticală */
-  margin-bottom: 50px; /* Spațiu la partea de jos a imaginii */
+  display: flex;
+  align-items: center;
+  margin-bottom: 50px;
 }
 
 .image {
-  max-width: 500px; /* Lățimea maximă a imaginii */
-  border-radius: 10px; /* Colțuri rotunjite pentru imagine */
-  margin-right: 20px; /* Spațiu la dreapta între imagine și text */
+  max-width: 500px; /* Lățimea maximă a imaginilor pe PC-uri */
+  border-radius: 10px;
+  margin-right: 20px;
 }
 
 .text {
-  font-size: 20px; /* Dimensiunea textului */
+  font-size: 20px;
 }
 
 .my-work a {
-  text-align: center; /* Aliniere centrul textului */
+  text-align: center;
 }
 
 /* Stilizare subsol */
 footer {
-  background-color: #333; /* Culoarea de fundal a subsolului */
-  color: #f1e509; /* Culoarea textului din subsol */
-  text-align: center; /* Aliniere centrul textului */
-  padding: 20px 0; /* Margini interioare pentru spațiu în subsol */
+  background-color: #333;
+  color: #f1e509;
+  text-align: center;
+  padding: 20px 0;
 }
 
 footer p {
-  margin: 0; /* Eliminarea marginii exterioare pentru textul din subsol */
-  font-size: 18px; /* Dimensiunea textului din subsol */
+  margin: 0;
+  font-size: 18px;
 }
 
 /* Stilizare listă */
 ul {
-  margin-left: 20px; /* Spațiu la stânga pentru listă */
-  list-style-type: disc; /* Tipul marcării pentru listă (buline) */
-  font-size: 20px; /* Dimensiunea textului din listă */
+  margin-left: 20px;
+  list-style-type: disc;
+  font-size: 20px;
 }
 
 /* Stilizare titlu h3 */
 h3 {
-  font-size: 30px; /* Dimensiunea textului pentru titlurile h3 */
-  margin-bottom: 20px; /* Spațiu la partea de jos a titlurilor h3 */
+  font-size: 30px;
+  margin-bottom: 20px;
 }
 
 /* Stilizare titlu Curriculum Vitae */
 header h2 {
-  font-size: 24px; /* Dimensiunea textului pentru titlurile h2 */
-  margin: 0; /* Eliminarea marginii exterioare pentru titlurile h2 */
+  font-size: 24px;
+  margin: 0;
 }
 
 /* Stilizare conținut pentru limba engleză */
 .content.en {
-  color: #333; /* Culoarea textului pentru conținutul în limba engleză */
+  color: #333;
 }
 
 /* Stilizare conținut pentru limba germană */
 .content.de {
-  color: #800000; /* Culoarea textului pentru conținutul în limba germană */
+  color: #800000;
+}
+
+/* Stiluri pentru ecrane mai mici (de exemplu, dispozitive mobile) */
+@media (max-width: 768px) {
+  body {
+    font-size: 16px; /* Dimensiunea textului redusă pentru dispozitive mobile */
+  }
+
+  .container {
+    padding: 10px; /* Margini interioare mai mici pentru conținut pe dispozitive mobile */
+  }
+
+  .image {
+    max-width: 100%; /* Lățime maximă de 100% pentru imagini pe dispozitive mobile */
+  }
+
+  /* Alte stiluri specifice pentru ecrane mici pot fi adăugate aici */
 }
